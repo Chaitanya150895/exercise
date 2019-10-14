@@ -1,0 +1,51 @@
+<div class="panel-body">
+    <div class="panel-heading">
+    </div>
+
+    <div class="example-container">
+        <span class="alert">
+            {{showMsg}}
+        </span>
+
+        <div class="row">
+
+            <div class="form-group col-md-4">
+            </div>
+
+            <div class="form-group col-md-4">
+                <mat-card class="example-card">
+                    <mat-card-title>
+                        <form [formGroup]="customForm" (ngSubmit)="tryLogin()">
+                            <mat-card class="example-card">
+                                <mat-card-title>
+                                    <a><i class="fa fa-user fa-2x"> Login</i></a>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-12" *ngFor="let data of formData">
+                                                <label for="{{data.for}}">{{data.label}}</label>
+                                                <input *ngIf="data.control=='input'" type="{{data.type}}"
+                                                    class="form-control" id="{{data.id}}"
+                                                    placeholder="{{data.placeholder}}"
+                                                    formControlName="{{data.control_name}}">
+
+                                                <div *ngIf="data.control=='button'">
+                                                    <button type="submit">Login</button>
+                                                    <br><br>
+                                                    Not having an Account?
+                                                    <button mat-button><a [routerLink]="['/adduser']">
+                                                            Register >></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </mat-card-title>
+                            </mat-card>
+                        </form>
+                    </mat-card-title>
+                </mat-card>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,11 +1,15 @@
 <nav class="navbar">
   <div class="container">
     <div class="navbar-header">
-      <span class="logo-lg"> <a [routerLink]="['/']"><h1>MYSTORE</h1></a></span>
+      <span class="logo-lg"> <a [routerLink]="['/']">
+          <h1>MYSTORE</h1>
+        </a></span>
     </div>
-    
+
 
     <ul class="nav navbar-nav navbar-right">
       <li><a [routerLink]="['/cart']">
-        <span matBadge="{{cartService.getItems().length}}" matBadgeOverlap="false"><i class="material-icons">shopping_cart</i></span>
-   </a></li></ul>
+          <span matBadge="{{cartService.getItems().length}}" matBadgeOverlap="false"><i
+              class="material-icons">shopping_cart</i></span>
+        </a></li>
+    </ul>

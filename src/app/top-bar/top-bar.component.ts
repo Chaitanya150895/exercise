@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
-
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
